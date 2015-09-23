@@ -159,7 +159,9 @@ class Payment {
             $this->getCustomParamsString($this->data)
         ]);
 
-        $this->valid = (md5($signature) === strtolower($data['SignatureValue']));
+        if (array_key_exists('SignatureValue', $data)) {
+            $this->valid = (md5($signature) === strtolower($data['SignatureValue']));
+        }
 
         return $this->valid;
     }
