@@ -11,7 +11,7 @@ Install this package through Composer. To your `composer.json` file, add:
 ```js
 {
     "require": {
-        "idma/robokassa": "dev-master"
+        "johndoejdg/robokassa": "dev-master"
     }
 }
 ```
